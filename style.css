@@ -1,0 +1,201 @@
+body {
+    background-color: #061b3a; 
+}
+
+.mordecai {
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+    gap: 60px;  
+    padding-top: 5%;
+}
+
+.dibujo {
+    position: relative;
+    width: 300px;
+    height: 350px;
+}
+
+  /* Puedes ajustar el tamaño de la imagen según convenga */
+.referencia img {
+    width: 300px;
+    height: auto;
+}
+
+.head{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #84A6FF;
+    border-radius: 98% 2% 50% 50% / 51% 66% 34% 49%;
+    border: 2px solid;
+    transform: rotate(-15deg);
+    overflow: hidden;
+    z-index: 500;
+}
+
+.head::after{
+    content: "";
+    position: absolute;
+    bottom: -1;
+    left: -1%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 98% 2% 50% 50% / 51% 66% 34% 49%;
+    clip-path: polygon(0 45%, 100% 65%, 100% 100%, 0 100%);
+    transform: rotate(0deg);
+    transform-origin: bottom center;
+}
+
+
+.mask {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0px;
+    right: -7%;
+    top: 1%;
+    border-left: 25px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 175px solid #061b3a;
+    transform: rotate(30deg);
+    z-index: 50;
+}
+
+.mask::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 10px;
+    background-color: #212030;
+    clip-path: polygon(62% 16%, 81% 9%, 100% 0, 100% 99%, 73% 90%, 35% 90%, 0 95%, 5% 62%, 0 28%, 33% 24%);
+    transform: rotate(-15deg);
+    z-index: 100;
+    
+} 
+
+.eyes{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    margin-top: -230px;
+    left: -10%;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid black;
+    z-index: 600;
+}
+
+.eyes::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    top: 45%;
+    z-index: 600;
+}
+
+.eyes-r{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    margin-top: -230px;
+    left: 20%;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 700;
+    border: 2px solid black;
+}
+
+.eyes-r::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    top: 45%;
+    z-index: 600;
+}
+
+.pico {
+    position: relative;
+    width: 270px;
+    height: 210px;
+    clip-path: polygon(75% 56%, 91% 59%, 100% 64%, 100% 73%, 79% 76%, 45% 78%, 23% 72%, 0 74%, 0 68%, 43% 60%);
+    background-color: #2b2d31;
+    top: -75%;
+    left: -50%;
+    transform: rotate(-5deg);
+    z-index: 670;
+}
+
+.pico-picoup{
+    content: "";
+    position: absolute;
+    width: 121px;
+    height: 210px;
+    clip-path: polygon(40% 89%, 61% 86%, 87% 85%, 88% 100%, 70% 100%, 30% 100%, 0 100%, 18% 94%);
+    background-color: #212030;
+    left: -17px;
+    top: 2%;
+    transform: rotate(-5deg);
+    z-index: 650;
+}
+
+.body{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    bottom: 70%;
+    left: 30%;
+    border: 2px solid;
+    z-index: 400;
+}
+
+.body::after{
+    content: "";
+    position: absolute;
+    bottom: 200px;
+    left: 35%;
+    transform: translateX(-50%);
+    border: 2px solid;
+    border-radius: 30%;
+    width: 50px;
+    height: 70px;
+    border-top: transparent;
+    border-bottom: transparent;
+    border-right: transparent;
+}
+
+/* brazo derecho */
+.armder{ 
+    position: relative;
+    width: 25%;
+    height: 100%;
+    background-color: #84A6FF;
+    border-radius: 100px 100px 50px 70px;
+    border: 2px solid;
+    left: 67%;
+    top: -273%;
+    z-index: 515;
+}
+
+/* brazo izquierdo */
+.armizq{
+    position: relative;
+    width: 42%;
+    height: 100%;
+    border-radius: 50px 50px 50px 50px;
+    background-color: #84A6FF;
+    left: 10%;
+    top: -172%;
+    border: 2px solid;
+    z-index: 380;
+}
